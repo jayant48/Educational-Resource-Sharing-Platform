@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Educational Resource Sharing Platform</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body {
+            font-family: 'Open Sans', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f7f6; /* Light background */
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .container {
+            margin: 20px auto;
+            max-width: 900px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+            border-radius: 12px;
+        }
+
+        header {
+            background-color: #2e86de; /* Education-themed blue */
+            color: white;
+            text-align: center;
+            padding: 20px;
+            border-radius: 12px 12px 0 0;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            color: #2e86de;
+            margin-bottom: 20px;
+        }
+
+        .upload-section, .files-section {
+            margin-bottom: 40px;
+        }
+
+        .upload-section {
+            text-align: center;
+        }
+
+        input[type="file"] {
+            padding: 12px;
+            margin: 15px 0;
+            border: 1px solid #ced4da;
+            border-radius: 6px;
+            width: 70%;
+            max-width: 300px;
+        }
+
+        button {
+            padding: 12px 25px;
+            background-color: #2e86de;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.2s ease-in-out;
+            box-shadow: 0 2px 5px rgba(46, 134, 222, 0.3);
+        }
+
+        button:hover {
+            background-color: #2979ff;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 30px;
+            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.05);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        th, td {
+            padding: 16px 20px;
+            text-align: left;
+            border-bottom: 1px solid #dee2e6;
+        }
+
+        th {
+            background-color: #343a40;
+            color: white;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        tbody tr:nth-child(even) {
+            background-color: #f8f9fa;
+        }
+
+        td .download-button {
+            background-color: #27ae60; /* Emerald green */
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background-color 0.2s ease-in-out;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        td .download-button:hover {
+            background-color: #219653;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding: 20px;
+            font-size: 14px;
+            color: #6c757d;
+            background-color: #f8f9fa;
+            border-top: 1px solid #dee2e6;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Educational Resource Sharing Platform</h1>
+            <p>Share and Access Learning Materials</p>
+        </header>
+
+        <!-- File Upload Section -->
+        <div class="upload-section">
+            <h2>Upload Resource</h2>
+            <input type="file" id="fileInput" />
+            <button id="uploadButton">Upload</button>
+        </div>
+
+        <!-- Files Section -->
+        <div class="files-section">
+            <h2>Available Resources</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Resource Name</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="fileTableBody">
+                    <!-- Files will be dynamically added here -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2025 Educational Resource Sharing Platform. All rights reserved.
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
